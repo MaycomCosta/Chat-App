@@ -1,7 +1,6 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
-import axios from 'axios'
 
 const firebaseConfig = {
     apiKey: "AIzaSyB5Ra1zf4RiOUdX8htDW9ha1gcCUT4aUwA",
@@ -13,10 +12,6 @@ const firebaseConfig = {
   }
 
 const app = firebase.initializeApp(firebaseConfig)
-
-const data = axios.get('http://localhost:8000/')
-
-console.log(data)
 
 const db = app.firestore()
 const auth = app.auth()
